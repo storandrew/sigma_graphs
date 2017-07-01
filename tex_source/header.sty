@@ -1,0 +1,84 @@
+%% Кодировка %%
+\usepackage{cmap}           % пакет для поиска в полученной пдфке
+\usepackage[utf8]{inputenc} % замена кодировки файла на utf8
+\usepackage[T2A]{fontenc}   % подключение кодировки шрифтов
+\usepackage[russian]{babel} % использование русского языка
+
+%% Поля %%
+\usepackage[top=1in, bottom=1in, left=1.25in, right=0.75in]{geometry}
+
+%% Математика %%
+\usepackage{amsfonts}               % Математические шрифты
+\usepackage{amstext}                % Текстовые вставки в формулы
+\usepackage{amssymb}                % Математические символы
+\usepackage{amsthm}                 % Оформление теорем
+\usepackage{array}                  % Таблицы и матрицы
+\usepackage{enumitem}               % Выравнивание itemize
+\usepackage{icomma}                 % "Умная" запятая
+\usepackage{mathtext}               % Кириллица в формулах
+\usepackage{mathtools}              % Тот же amsmath, только с некоторыми поправками
+
+%% Алгоритмы %%
+\usepackage{algorithm}              % Убирает перенос + другие мелочи
+\usepackage{algorithmicx}           % Окружение для кода
+\usepackage[noend]{algpseudocode}   % Псевдокод
+\usepackage{listings}               % Отрывки кода на настоящих ЯП
+
+%% Графика %%
+\usepackage[pdftex]{graphicx}       % Вставка картинок
+\graphicspath{{images/}}            % Стандартный путь к картинкам
+\usepackage{tikz}                   % Рисование всего
+\usepackage{pgfplots}               % Графики
+\usepackage{circuitikz}             % Электрические цепи
+\usepackage{wrapfig}                % Обволакивание изображений текстом
+\usepackage{tkz-euclide}            % Планиметрия
+\usepackage{fancybox}               % Различные рамки и обводки
+
+%% Библиотеки Tikz %%
+\usetikzlibrary{patterns,calc,intersections,through,backgrounds}
+\usetkzobj{all}
+
+%% Оформление текста %%
+\usepackage{indentfirst}            % Красная строка в начале текста
+\usepackage{epigraph}               % Эпиграфы
+\usepackage{fancyhdr}               % Колонтитулы
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}   % Ссылки
+\usepackage[normalem]{ulem}         % Прямое зачёркивание
+\usepackage[makeroom]{cancel}       % Косое зачёркивание
+%\usepackage{titlesec}              % Изменение формата заголовков
+\usepackage{makecell}               % Разбиение клетки по диагонали
+
+%% Колонтитулы %%
+\fancyhead[L]{\textit{Летняя школа <<Сигма>>}}
+\fancyhead[R]{\textit{МОЦРО 117}}
+\fancyhead[C]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{}
+
+%% Команды %%
+\usepackage{xparse}                 % Создания новых команд  
+\usepackage{xifthen}                % if-else в определениях комманд
+
+%% Титульный лист %%
+\renewcommand{\title}{
+    \begin{titlepage}
+    \hbox{
+        \hspace*{0.05\textwidth}
+        \rule{1pt}{\textheight}
+        \hspace*{0.1\textwidth}
+        \parbox[b]{0.85\textwidth}{
+        {\includegraphics[width=\linewidth]{graph}}\\[1\baselineskip]
+            {\noindent\Huge\bfseries Введение в теорию графов и
+            алгоритмы на графах}\\[4\baselineskip]
+            {\large\textrm{Курс вели}}\\[2\baselineskip]
+            {\Large\textsc{Стороженко Андрей, ФКН НИУ ВШЭ
+            }}\\[\baselineskip]
+            {\Large\textsc{Таранов Сергей, ФУПМ МФТИ
+            }}\\[3\baselineskip]
+            {\noindent Летняя научно-олимпиадная школа <<
+            Сигма>>\\ 2017}
+          }
+    }
+    \end{titlepage}
+}
