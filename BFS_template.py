@@ -14,12 +14,12 @@ with open('input.txt') as input_file:
     first = int(vertexes[0]) - 1
     second = int(vertexes[1]) - 1
 
-distances = [-1 for i in range(number_vertexes)
+distances = [-1 for i in range(number_vertexes)]
 
 '''
 INSERT YOUR CODE HERE
 '''
 
 output_file = open('output.txt', 'w')
-output_file.write(str(distance[second]) + '\n')
+output_file.write(str(distances[second]) + '\n')
 output_file.close()
